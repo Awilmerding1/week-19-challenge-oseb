@@ -1,14 +1,14 @@
 import React from 'react';
 
 
-class App extends React.Component {
-  render() {
+const BlogPosts = (props) => {
+
     return (
       <div >
-
+        BlogPosts
       </div>
     );
-  }
+
 }
 
-export default App;
+export default BlogPosts;

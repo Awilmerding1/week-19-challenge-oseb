@@ -1,68 +1,64 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Week 19 Challenge
 
-## Available Scripts
 
-In the project directory, you can run:
+## React/Redux Blog App
 
-### `yarn start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Project Instructions
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+In this challenge we will create a react/redux application that makes GET and POST requests to a Rails API. We will be using this API: https://github.com/Awilmerding1/blog-api. Go ahead and clone the repository, run `bundle install`, `rake db:migrate` and then start the backend with `rails s`. Once the rails server is running, you can check the endpoints. For example, if you want to check the index endpoint and your rails server is running on localhost:3000, you would navigate to `localhost:3000/api/v1/posts`.
 
-### `yarn test`
+Remember that you will need to be running your frontend and backend servers at all times so that the two can talk to one another!
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This application will have four components:
+- App
+- BlogPosts
+- BlogPostForm
+- NavBar
 
-### `yarn build`
+To complete this challenge you will practice working with the following concepts:
+- Lifecycle Methods
+- Async React
+- Class vs. Functional Components
+- Client-Side Routing
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+The files for each component have been set up but you will need to create each component and implement the functionality below. NOTE: when you start the application for the first time you will receive an error because there is not yet an App component to be rendered!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## App Component
 
-### `yarn eject`
+The App component will be responsible for requesting the data from the API. Which lifecycle method would make sense to use for this request? The App component will also need to store the fetched data.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+You should also set up your routes inside the App component. You should have three routes: one for your People component, one for your Number component, and one for your NavBar component.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+You should NOT directly render any of the components. What path should you use for your NavBar component if you ALWAYS want it rendered on the screen?
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Consider: What type of component (functional or class) will App need to be and why?
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## NavBar Component
 
-## Learn More
+The NavBar component is responsible for holding two Links: one for the People component and one for the Number component.  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Consider: What type of component (functional or class) should NavBar be and why?
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## People Component
 
-### Code Splitting
+The People component should render the `name` and `craft` values of each person.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Consider: What type of component (functional or class) should People be and why?
 
-### Analyzing the Bundle Size
+## Number Component
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+The Number component should render the number of people currently in space.
 
-### Making a Progressive Web App
+Consider: What type of component (functional or class) should Number be and why?
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Getting Started
 
-### Advanced Configuration
+To start install the necessary packages, run `npm install` and then run `npm start` to start the application.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+NOTE: when you start the application for the first time you will receive an error because there is not yet an App component to be rendered!
 
-### Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+https://github.com/Awilmerding1/blog-api

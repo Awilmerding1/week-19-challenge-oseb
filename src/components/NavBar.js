@@ -1,14 +1,14 @@
 import React from 'react';
 
 
-class App extends React.Component {
-  render() {
+const NavBar = (props) => {
+
     return (
       <div >
-
+          NavBar
       </div>
     );
-  }
+
 }
 
-export default App;
+export default NavBar;
